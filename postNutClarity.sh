@@ -29,7 +29,8 @@ git clone https://github.com/fschir/dotfiles.git
 cd dotfiles
 
 cp .* /home/flo/ -r 
-
+cd /home/flo
+chown -R flo:flo .
 
 
 
