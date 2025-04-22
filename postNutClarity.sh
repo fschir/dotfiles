@@ -7,9 +7,9 @@ echo "flo   ALL=(ALL:ALL) ALL" >> /etc/sudoers
 
 #install zsh + oh-my-zsh + powerlevel10k
 apt install -y zsh
-chsh -s $(which zsh)
+sudo -u flo -- chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-home/flo/.oh-my-zsh/custom}/themes/powerlevel10k"
 
 
 # install neovim
